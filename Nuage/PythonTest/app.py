@@ -17,19 +17,17 @@ logger.setLevel(logging.INFO)
 
 
 def get_option():
-  while(True):
-    try:
-      opt = raw_input("Please enter the number: ")
-      break
-    except ValueError:
-      logger.error("invalid input " , opt)
-      print("Oops! That was no valid number.Try again...")
+  try:
+    opt = raw_input("Please enter the number: ")
+  except ValueError:
+    logger.error("invalid input " , opt)
+    print("Oops! That was no valid number.Try again...")
     
-    return opt
+  return opt
 
 
 def get_request():
-  url = "http://0.0.0.0:80/api/todos"
+  url = "http://152.46.20.242:80/api/todos"
   logger.info("sending GET request to %s" , str(url))
   response = requests.get(url)
   data = response.json()
@@ -58,7 +56,7 @@ def delete_todos():
   for key, value in dict1.iteritems():
      if int(key) == int(var):
        _id = value.items()[0][1]
-  url = "http://0.0.0.0:80/api/todos/" + _id
+  url = "http://152.46.20.242:80/api/todos/" + _id
   logger.info("sending DELETE request to " , str(url))
   response = requests.delete(url)
   read_todos()
@@ -66,7 +64,7 @@ def delete_todos():
  
 def post_todos():
   task = raw_input("Please enter a task for the to-do list : ")
-  url = "http://0.0.0.0:80/api/todos"
+  url = "http://152.46.20.242:80/api/todos"
   logger.info("sending POST request to" , str(url))
   r = requests.post(url, json={"text": str(task)})
   read_todos()
