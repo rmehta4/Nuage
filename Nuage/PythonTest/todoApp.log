@@ -1,0 +1,7 @@
+
+2017-04-10 02:07:43,353 root         INFO     sending GET request to http://0.0.0.0:80/api/todos
+
+
+2017-04-10 02:07:43,361 root         INFO     Received data {u'result': [{u'_id': u'58eb13c70a7ff7000ffd4360', u'task': u'Create Simple App'}, {u'_id': u'58eb13caad3259000d6d3898', u'task': u'Scale it'}, {u'_id': u'58eb13d2ad3259000d6d3899', u'task': u'Wait for it to crash'}, {u'_id': u'58eb13da0a7ff7000ffd4361', u'task': u'Scale it Again!!'}, {u'_id': u'58eb1ca8ad3259000d6d389a', u'task': u'Complete the documentation'}, {u'_id': u'58eb1d330a7ff7000ffd4362', u'task': u'Record a video'}]}
+
+
