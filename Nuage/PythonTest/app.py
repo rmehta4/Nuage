@@ -57,7 +57,7 @@ def delete_todos():
      if int(key) == int(var):
        _id = value.items()[0][1]
   url = "http://152.46.20.242:80/api/todos/" + _id
-  logger.info("sending DELETE request to " , str(url))
+  logger.info("sending DELETE request to %s" , str(url))
   response = requests.delete(url)
   read_todos()
   return
@@ -65,7 +65,7 @@ def delete_todos():
 def post_todos():
   task = raw_input("Please enter a task for the to-do list : ")
   url = "http://152.46.20.242:80/api/todos"
-  logger.info("sending POST request to" , str(url))
+  logger.info("sending POST request to %s" , str(url))
   r = requests.post(url, json={"text": str(task)})
   read_todos()
 
